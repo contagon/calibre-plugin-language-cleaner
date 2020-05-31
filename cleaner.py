@@ -155,24 +155,24 @@ re_list = [
     #########################################
     # Remove suggestive 'tits' with not suggestive belly
     # don't do 'tit for tat', tit-tat-toe, or split tit-ular
-    (re.compile(r'\b[tT][iI][tT][sS]?\b(?! for)(?!-tat)(?!-ul)',
-                re.I), 'belly', keep_case),
+    # (re.compile(r'\b[tT][iI][tT][sS]?\b(?! for)(?!-tat)(?!-ul)',
+                # re.I), 'belly', keep_case),
     # Slut is rude, replace with slightly better hussy
-    (re.compile(r'\bslut\b', re.I), 'hussy', keep_case),
-    (re.compile(r'\bsluts\b', re.I), 'hussies', keep_case),
+    # (re.compile(r'\bslut\b', re.I), 'hussy', keep_case),
+    # (re.compile(r'\bsluts\b', re.I), 'hussies', keep_case),
     # Change topless bar to just bar
-    (re.compile(r'topless\Wbar', re.I), 'bar', keep_case),
+    # (re.compile(r'topless\Wbar', re.I), 'bar', keep_case),
     # Replace whore with woman (not always a good replacement)
     # (re.compile(r'\bwhore\b',re.I),'woman',keep_case),
     # (re.compile(r'\bwhores\b',re.I),'women',keep_case),
     # Whorehouse becomes brothel
-    (re.compile(r'whorehouse', re.I), 'brothel', keep_case),
+    # (re.compile(r'whorehouse', re.I), 'brothel', keep_case),
     # Crap and crapper to 'use the toilet'
-    (re.compile(r'take\Wa\Wcrap(per)?', re.I), 'use the toilet', keep_case),
-    (re.compile(r'\bcrapper', re.I), 'toilet', keep_case),
+    # (re.compile(r'take\Wa\Wcrap(per)?', re.I), 'use the toilet', keep_case),
+    # (re.compile(r'\bcrapper', re.I), 'toilet', keep_case),
     # Crap and crapper to garbage
-    (re.compile(r'\bcrap\b', re.I), 'garbage', keep_case),
-    (re.compile(r'\bcrapped\b', re.I), 'wet', keep_case),
+    # (re.compile(r'\bcrap\b', re.I), 'garbage', keep_case),
+    # (re.compile(r'\bcrapped\b', re.I), 'wet', keep_case),
     # Cock-up with mess-up
     (re.compile(r'\bcock.?up\b', re.I), "mess up", keep_case),
     # Cocksucker with sucker
@@ -240,13 +240,13 @@ re_list = [
     (re.compile(r'\b((?:gods? *)?damn(?:ed))(?:\W+)(sure|near|sight|good|much|hard|easy|big|little|glad|clever|mess|smart|fine|fool|right|thing|much|shame|nice|mean|bad|lucky|late|important)', re.I), '', drop_first_match),
     (re.compile(r'\b((?:gods? *)?damn(?:ed))(?:\W+)well', re.I), 'darn well', keep_case),
     # Religious damning
-    (re.compile(r'\b(?:gods? *)?damned', re.I), 'cursed', keep_case),
-    (re.compile(r'\b(?:gods? *)?damndest', re.I), 'very best', keep_case),
-    (re.compile(r'\b(?:gods? *)?damning', re.I), 'condemning', keep_case),
-    (re.compile(r'\b(?:gods? *)?damnable', re.I), 'condemning', keep_case),
-    (re.compile(r'\b(?:gods? *)?damnably', re.I), 'cursedly', keep_case),
-    (re.compile(r'\b(?:gods? *)?damnatory', re.I), 'condemning', keep_case),
-    (re.compile(r'\b(?:gods? *)?damnation', re.I), 'condemnation', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damned', re.I), 'cursed', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damndest', re.I), 'very best', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damning', re.I), 'condemning', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damnable', re.I), 'condemning', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damnably', re.I), 'cursedly', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damnatory', re.I), 'condemning', keep_case),
+    # (re.compile(r'\b(?:gods? *)?damnation', re.I), 'condemnation', keep_case),
     # damn it
     (re.compile(r', (?:gods? *)?damn it(?: all)?', re.I), '', keep_case),
     (re.compile(r'((?:gods? *)?damn it(?: all)?, +)(.)', re.I), '', drop_first_match),
@@ -365,16 +365,16 @@ re_list = [
     # dick
     #########################################
     # dick around
-    (re.compile(r'dick(?=(in[^\s])?\W(around|with|on\b|up\b|over|under|through))',
-                re.U+re.I), "mess", first_case),
+    # (re.compile(r'dick(?=(in[^\s])?\W(around|with|on\b|up\b|over|under|through))',
+                # re.U+re.I), "mess", first_case),
     # dickin['/g]
-    (re.compile(r'dick(?=(in[^\s][^o]))', re.U+re.I), "mess", keep_case),
+    # (re.compile(r'dick(?=(in[^\s][^o]))', re.U+re.I), "mess", keep_case),
     #dickweed, dickhead
-    (re.compile(r'dick[WwHh]e[AaEe]d', re.I), "jerk", keep_case),
+    # (re.compile(r'dick[WwHh]e[AaEe]d', re.I), "jerk", keep_case),
     # know dick
-    (re.compile(r'(?<=[Kk]now )dick'), "squat", keep_case),
+    # (re.compile(r'(?<=[Kk]now )dick'), "squat", keep_case),
     # dick on its own (toe is just sort of random...), not bird dickcissel
-    (re.compile(r'\bdick\b(?!-ciss)'), "toe", keep_case),
+    # (re.compile(r'\bdick\b(?!-ciss)'), "toe", keep_case),
     #########################################
     # bastard
     #########################################
@@ -383,102 +383,102 @@ re_list = [
     # hell
     #########################################
     # hellhound
-    (re.compile(r'\bhell\W?hound', re.I), 'demonhound', keep_case),
+    # (re.compile(r'\bhell\W?hound', re.I), 'demonhound', keep_case),
     # hell-word (not helldiver bird)
-    (re.compile(r'\bhell(?=-[^oO])(?!-diver)', re.I), 'demon', keep_case),
+    # (re.compile(r'\bhell(?=-[^oO])(?!-diver)', re.I), 'demon', keep_case),
     # hell's bells
-    (re.compile(r'\bhell.{0,4}s?\W?bells?', re.I), 'by golly', keep_case),
+    # (re.compile(r'\bhell.{0,4}s?\W?bells?', re.I), 'by golly', keep_case),
     # hell with
-    (re.compile(r'(to|the)\Whell\Wwith', re.I), 'forget', keep_case),
-    (re.compile(r'\bhell(?=\Wwith)', re.I), 'heck', keep_case),
+    # (re.compile(r'(to|the)\Whell\Wwith', re.I), 'forget', keep_case),
+    # (re.compile(r'\bhell(?=\Wwith)', re.I), 'heck', keep_case),
     # beats the hell out of
-    (re.compile(r'beats\Wthe\Whell\Wout\Wof', re.I), 'beats', keep_case),
+    # (re.compile(r'beats\Wthe\Whell\Wout\Wof', re.I), 'beats', keep_case),
     # to hell
-    (re.compile(r'(?<=\bto\W)hell\b', re.I), 'perdition', keep_case),
+    # (re.compile(r'(?<=\bto\W)hell\b', re.I), 'perdition', keep_case),
     # some hell
-    (re.compile(r'(?<=some\W)hell\b', re.I), 'trouble', keep_case),
+    # (re.compile(r'(?<=some\W)hell\b', re.I), 'trouble', keep_case),
     # give/gave hell
-    (re.compile(r'(g[IiAa]ve.{0,7}\W)hell\b(?!\Wof)',
-                re.I), r'\1trouble', False),
+    # (re.compile(r'(g[IiAa]ve.{0,7}\W)hell\b(?!\Wof)',
+                # re.I), r'\1trouble', False),
     # raise/raising hell
-    (re.compile(r'(rais[IiEe].{0,10}\W)hell\b', re.I), r'\1trouble', False),
+    # (re.compile(r'(rais[IiEe].{0,10}\W)hell\b', re.I), r'\1trouble', False),
     #chance in hell
-    (re.compile(r'(?<=chance)( in) hell\b(\W*.)', re.I), '*removed*', drop_first_match),
+    # (re.compile(r'(?<=chance)( in) hell\b(\W*.)', re.I), '*removed*', drop_first_match),
     #burn in hell
-    (re.compile(r'(?<=burn)( in) hell\b(\W*.)', re.I), '*removed*', drop_first_match),
+    # (re.compile(r'(?<=burn)( in) hell\b(\W*.)', re.I), '*removed*', drop_first_match),
     # living hell
-    (re.compile(r'(?<=living\W)hell\b', re.I), 'prison', keep_case),
+    # (re.compile(r'(?<=living\W)hell\b', re.I), 'prison', keep_case),
     # for/etc the hell
-    (re.compile(r'(?<=(..for)\Wthe\W)hell\b', re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=(..for)\Wthe\W)hell\b', re.I), 'heck', keep_case),
     # what the hell[.?!]
-    (re.compile(r'what\Wthe\Whell(?=[\.?!\,])',
-                re.I), 'what the heck', keep_case),
+    # (re.compile(r'what\Wthe\Whell(?=[\.?!\,])',
+                # re.I), 'what the heck', keep_case),
     # (in) the hell
-    (re.compile(
-        r'(?: in)? (the)\Whell(?=[ \.?!\,])(?! in)(?! your)(?! out)(?! I\b)(?! of\b)(\W*.)', re.I), '*removed*', drop_first_match),
-    (re.compile(r'(?:in\W)?(the)\W+hell (?!in)(?!your)(?!out)(?!I\b)(?!of\b)(\W*.)',
-                re.I), '*removed*', drop_first_match),
+    # (re.compile(
+        # r'(?: in)? (the)\Whell(?=[ \.?!\,])(?! in)(?! your)(?! out)(?! I\b)(?! of\b)(\W*.)', re.I), '*removed*', drop_first_match),
+    # (re.compile(r'(?:in\W)?(the)\W+hell (?!in)(?!your)(?!out)(?!I\b)(?!of\b)(\W*.)',
+                # re.I), '*removed*', drop_first_match),
     #(re.compile(r'(?:\Win)?\W(the)\Whell\b(?=[ \.?!\,])(?! in)(\W*.)',re.I),'*removed*',drop_first_match),
     # what/how/whatever/etc the hell
-    (re.compile(r'(?<=(..how|..for|where|.what|tever|..who)\Wthe\W)hell\b',
-                re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=(..how|..for|where|.what|tever|..who)\Wthe\W)hell\b',
+                # re.I), 'heck', keep_case),
     # sure/busy/etc. as hell
-    (re.compile(r'(?<!known)( as) hell\b(\W*.)', re.I), '', drop_first_match),
+    # (re.compile(r'(?<!known)( as) hell\b(\W*.)', re.I), '', drop_first_match),
     # helluva
-    (re.compile(r'\bhelluva', re.I), 'heck of a', keep_case),
+    # (re.compile(r'\bhelluva', re.I), 'heck of a', keep_case),
     #way in hell
-    (re.compile(r'(?<=way) (in) hell\b(\W*.)', re.I), '', drop_first_match),
-    #what in hell
-    (re.compile(r'(?<=what) (in) hell\b(\W*.)', re.I), '', drop_first_match),
+    # (re.compile(r'(?<=way) (in) hell\b(\W*.)', re.I), '', drop_first_match),
+    # what in hell
+    # (re.compile(r'(?<=what) (in) hell\b(\W*.)', re.I), '', drop_first_match),
     # but hell
-    (re.compile(r'(?<=but )hell\b', re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=but )hell\b', re.I), 'heck', keep_case),
     # to be hell
-    (re.compile(r'(?<=to be )hell\b', re.I), 'terrible', keep_case),
+    # (re.compile(r'(?<=to be )hell\b', re.I), 'terrible', keep_case),
     # is/it's hell
-    (re.compile(r'(?<=is )hell\b', re.I), 'perdition', keep_case),
-    (re.compile(r'(?<=it[^\s]s )hell\b', re.U+re.I), 'perdition', keep_case),
+    # (re.compile(r'(?<=is )hell\b', re.I), 'perdition', keep_case),
+    # (re.compile(r'(?<=it[^\s]s )hell\b', re.U+re.I), 'perdition', keep_case),
     #Aw, hell
-    (re.compile(r'(?<=Aw, )hell\b', re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=Aw, )hell\b', re.I), 'heck', keep_case),
     # catch hell
-    (re.compile(r'catch hell\b', re.I), 'get in trouble', keep_case),
-    (re.compile(r'caught hell\b', re.I), 'got in trouble', keep_case),
+    # (re.compile(r'catch hell\b', re.I), 'get in trouble', keep_case),
+    # (re.compile(r'caught hell\b', re.I), 'got in trouble', keep_case),
     # as hell
-    (re.compile(r'sure as hell[ \,]', re.I), 'for sure', keep_case),
-    (re.compile(r'ed as hell\b', re.I), 'ed as could be', keep_case),
-    (re.compile(r'\bas hell[ \,]', re.I), 'as could be', keep_case),
+    # (re.compile(r'sure as hell[ \,]', re.I), 'for sure', keep_case),
+    # (re.compile(r'ed as hell\b', re.I), 'ed as could be', keep_case),
+    # (re.compile(r'\bas hell[ \,]', re.I), 'as could be', keep_case),
     # of hell
-    (re.compile(r'\bof hell\b', re.I), 'of torture', keep_case),
+    # (re.compile(r'\bof hell\b', re.I), 'of torture', keep_case),
     # all hell
-    (re.compile(r'\ball hell\b', re.I), 'all perdition', keep_case),
+    # (re.compile(r'\ball hell\b', re.I), 'all perdition', keep_case),
     # hell was
-    (re.compile(r'\bhell(?= was)', re.I), 'heck', keep_case),
+    # (re.compile(r'\bhell(?= was)', re.I), 'heck', keep_case),
     # hell to pay
-    (re.compile(r'\bhell(?= to pay)', re.I), 'heck', keep_case),
+    # (re.compile(r'\bhell(?= to pay)', re.I), 'heck', keep_case),
     # bloody hell
-    (re.compile(r'(?<=bloody.)hell\b', re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=bloody.)hell\b', re.I), 'heck', keep_case),
     # dang hell
-    (re.compile(r'(?<=dang.)hell\b', re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=dang.)hell\b', re.I), 'heck', keep_case),
     # like hell
-    (re.compile(r'(?<=(..look|looked|..hurt) )like hell\b', re.I), 'really bad', keep_case),
-    (re.compile(r'(?<=felt )like hell\b', re.I), 'like garbage', keep_case),
-    (re.compile(r'L[Ii][Kk][Ee]\W[Hh][Ee][Ll][Ll]'),
-     'not a chance', keep_case),
-    (re.compile(r'l[Ii][Kk][Ee]\W[Hh][Ee][Ll][Ll]'), 'like mad', keep_case),
+    # (re.compile(r'(?<=(..look|looked|..hurt) )like hell\b', re.I), 'really bad', keep_case),
+    # (re.compile(r'(?<=felt )like hell\b', re.I), 'like garbage', keep_case),
+    # (re.compile(r'L[Ii][Kk][Ee]\W[Hh][Ee][Ll][Ll]'),
+     # 'not a chance', keep_case),
+    # (re.compile(r'l[Ii][Kk][Ee]\W[Hh][Ee][Ll][Ll]'), 'like mad', keep_case),
     # The hell I
-    (re.compile(r'the\Whell\WI\b', re.I), 'the heck I', keep_case),
+    # (re.compile(r'the\Whell\WI\b', re.I), 'the heck I', keep_case),
     # hell of/out/off ...
-    (re.compile(r'\bhell(?=\W(of\W|out|off\b|do\W|are\b))', re.I), 'heck', keep_case),
+    # (re.compile(r'\bhell(?=\W(of\W|out|off\b|do\W|are\b))', re.I), 'heck', keep_case),
     # hellish
-    (re.compile(r'\bhellish', re.I), 'unpleasant', keep_case),
+    # (re.compile(r'\bhellish', re.I), 'unpleasant', keep_case),
     # this/real hell (not followed by ?)
-    (re.compile(r'(?<=(this|real)\W)hell(\W?hole|\W?pit)?(?!\?)', re.I), 'pit', keep_case),
+    # (re.compile(r'(?<=(this|real)\W)hell(\W?hole|\W?pit)?(?!\?)', re.I), 'pit', keep_case),
     # hell's
-    (re.compile(r'\bhell[^\s]s', re.U+re.I), 'perditions\'s', keep_case),
+    # (re.compile(r'\bhell[^\s]s', re.U+re.I), 'perditions\'s', keep_case),
     # interjection hell (preceeded by . or " or --, etc, followed by ,
-    (re.compile(r'(?<=([\.?!,]\W\W|..\"|”|“|.\W\W))hell(?=[,!])',
-                re.U+re.I), 'heck', keep_case),
+    # (re.compile(r'(?<=([\.?!,]\W\W|..\"|”|“|.\W\W))hell(?=[,!])',
+                # re.U+re.I), 'heck', keep_case),
     # >hell< shows up in html with italics or emphasis
-    (re.compile(r'\>hell\<', re.U+re.I), '>perdition<', keep_case),
+    # (re.compile(r'\>hell\<', re.U+re.I), '>perdition<', keep_case),
 ]
 #+ ass_list + lord_list
 
